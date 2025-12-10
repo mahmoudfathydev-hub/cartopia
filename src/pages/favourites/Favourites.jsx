@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import { CartContext } from "../../components/context/CartContext";
 import Pagetransition from "../../components/Pagetransition";
-import Products from "../../components/slideProducts/products";
+import Products from '../../components/slideProducts/Products';
+
 
 
 export default function Favourites() {
