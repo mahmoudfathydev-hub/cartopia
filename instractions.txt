@@ -1,0 +1,6 @@
+APP
+    HEADER
+        TOP_HEADER
+        BTM_HEADER
+    MAIN
+        BANNAR_SLIDER

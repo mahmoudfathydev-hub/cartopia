@@ -1,0 +1,112 @@
+:root {
+    --main_color: #0090f0;
+    --hover_color: #035a83;
+    --p_color: #7b7b7b;
+    --bg_color: #F3F3F3;
+    --white_color: #fff;
+    --heading_color: #253237;
+    --border_color: #d6d6d6d5;
+    --yellow_color: #eec702;
+    --red: #E74040;
+    --red-hover: #920c0c;
+}
+
+.search-box-container {
+    position: relative; 
+    width: 100%;
+}
+
+
+.search-suggestions {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 100%;
+    background: var(--white_color);
+    border: 1px solid var(--border_color);
+    border-top: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    opacity: 0;
+    transform: translateY(5px);
+    pointer-events: none;
+    transition: all .25s ease;
+    z-index: 1000000000000;
+    border-radius: 15px;
+}
+
+.search-suggestions.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+
+.search-suggestions li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin: 10px 0;
+    padding: 0 10px;
+    text-decoration: none;
+    position: relative;
+}
+
+
+.search-suggestions li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 90%;
+    height: 1px;
+    background: var(--border_color);
+    transform: translateX(-50%);
+    margin-bottom: -10px;
+}
+
+.search-suggestions li:last-child a::after {
+    display: none;
+}
+
+.search-suggestions img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+
+.search-suggestions .item-title-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+
+
+.search-suggestions .product-title {
+    font-size: 14px;
+    color: var(--heading_color);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+}
+
+
+.search-suggestions .product-price {
+    font-size: 14px;
+    color: var(--main_color);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.search-suggestions li:hover {
+    background: var(--bg_color);
+}
