@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import "./productdetail.css"
 import SlideProduct from '../../components/slideProducts/SlideProducts';
-import ProductImages from './productimages'
+import ProductImages from './Productimages'
 import ProductInfo from './ProductInfo'
 import Pagetransition from '../../components/Pagetransition';
 
