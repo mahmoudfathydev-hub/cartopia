@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Pagetransition from "../../components/Pagetransition";
-import Products from "../../components/slideProducts/products";
+import Products from '../../components/slideProducts/Products.jsx';
+
 import { tr } from "framer-motion/client";
 
 export default function SearchPage() {
